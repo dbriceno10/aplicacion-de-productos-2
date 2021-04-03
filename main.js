@@ -35,7 +35,11 @@ class Interface {
         product_List.appendChild(element_Product)
         //luego de agregar el producto resetea el formulario, puede hacerse desde aqyí utilizando el this
         // this.clearForm()
+        // const saveName = localStorage.getItem("card text-center mb-4",product.name);
+        // console.log(saveName);
     }
+
+
 
     deleteProduct(element_HTML){
         if(element_HTML.name === "delete") {//si el elemento capturado tiene la priedad (name) "delete", este caso en nuestro enlace (etiqueta "a")
@@ -66,6 +70,7 @@ class Interface {
     }
 }
 
+
 //Ahora vamos a interactuar con los eventos de la aplicación (del DOM)
 //capturando los datos del formulario
 // document.getElementById("product-form")
@@ -79,7 +84,13 @@ document.getElementById("product-form").addEventListener("submit", function (ev)
     const form_Name = document.getElementById("name").value
     const form_Price = document.getElementById("price").value
     const form_Year = document.getElementById("year").value
-    console.log(`${form_Name} ${form_Price}$ ${form_Year}`)
+    // console.log(`${form_Name} ${form_Price}$ ${form_Year}`)
+    const saveN = localStorage.setItem("name",form_Name)
+    console.log(`Nombre ${saveN}`)
+    const saveP = localStorage.setItem("price",form_Price)
+    
+    const saveY = localStorage.setItem("year",form_Year)
+    
 
     //vamos a crear un nuevo objeto producto con los datos obtenidos
     console.log(new Product(form_Name, form_Price, form_Year))
@@ -100,7 +111,7 @@ document.getElementById("product-form").addEventListener("submit", function (ev)
 document.getElementById("product-list").addEventListener("click", function(ev) {
     //nota relacionado a este alert, cuando damos click en cualquier parte del elemento agregado, se esta disparando debido a que todos los elemetntos del product-list estan compartiendo el evento de click
     // alert("eliminando")
-    console.log(ev.target)
+    // console.log(ev.target)
     const interface = new Interface()
     interface.deleteProduct(ev.target)
 })

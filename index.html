@@ -13,7 +13,7 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Products App</a>
+        <a class="navbar-brand" href="#">Aplicación de Productos</a>
     </nav>
 
 
@@ -25,19 +25,19 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Add Add A Product</h4>
+                        <h4>Introduce un producto</h4>
                     </div>
                     <form id="product-form" class="card-body">
                         <div class="form-group">
-                            <input type="text" id="name" placeholder="Product Name" class="form-control" required>
+                            <input type="text" id="name" placeholder="Producto" class="form-control" required autocomplete="on" value="redmi 9">
                         </div>
                         <div class="form-group">
-                            <input type="number" id="price" step="0.01" placeholder="Product Price"
-                                class="form-control" required>
+                            <input type="number" id="price" step="0.01" placeholder="Precio"
+                                class="form-control" required autocomplete="on" value="200">
                         </div>
                         <div class="form-group">
-                            <input type="number" id="year" min="1900" max="2099" step="1" value="2018"
-                                class="form-control" required>
+                            <input type="number" id="year" min="1900" max="2099" step="1" value="2020" placeholder="Año"
+                                class="form-control"  autocomplete="on">
                         </div>
                         <input type="submit" value="Save" class="btn btn-primary btn-block">
                     </form>
@@ -49,53 +49,8 @@
         </div>
     </div>
     <script src="./main.js"></script>
-    <!-- <script src="./main.js" type="module"></script> -->
 </body>
 
 </html>
-<!-- <body>
-    <header>
-    
-    <nav class="navbar navbar-light bg-ligth">
-        <a href="#" class="navbar-brand">
-            Product App
-        </a>
-    </nav>
-    </header>
-    <main>
-        
-        <div class="app--container">
-            <div id="app" class="row pt-5">
-                <div class="col-md-4">
-                    <div class="col-md-8">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>Add A Product</h4>
-                            </div>
-                            <div>
-                                <form action="" id="product-form" class="card-body">
-                                    <div class="form-group">
-                                        <input type="text" id="name" placeholder="Product Name" required class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="number" step="0.01" id="price" placeholder="Product Price" class="form-control" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="number" id="year" value="2021" min="1900" max="2021" placeholder="Year product" required class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="submit" value="Save" class="btn btn-primary">
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        
-                        <div id="product-list" class="col-md8"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <script src="./main.js"></script>
-</body> -->
+
 </html>
