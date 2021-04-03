@@ -24,9 +24,9 @@ class Interface {
         element_Product.innerHTML = `
         <div class="card text-center mb-4">
             <div class="card-body">
-            <b>Product Name</b>: ${product.name}
-            <b>Product Price</b>: ${product.price}$
-            <b>Product Year</b>: ${product.year}
+            <b>Nombre del Producto</b>: ${product.name}
+            <b>Precio del Producto</b>: ${product.price}$
+            <b>Año del Producto</b>: ${product.year}
             <a href="#" class="btn btn-danger" name="delete">Delete</a>
             </div>
         </div>`
